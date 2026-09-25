@@ -1,3 +1,9 @@
+## Download Tori Download v0.22
+
+[⬇ Download Windows Installer](https://github.com/robijoychakma375-hash/ToriDownload/releases/download/v0.22.0/ToriDownload-Setup-v0.22.exe)
+
+[⬇ Download Portable ZIP](https://github.com/robijoychakma375-hash/ToriDownload/releases/download/v0.22.0/ToriDownload-Portable-v0.22.zip)
+
 # Tori Download v0.22 (Windows testing build)
 
 > **Latest source version:** v0.22.0. The source repository does not contain a compiled Windows EXE. Build it on Windows using `build-windows.bat`, or download the installer and portable ZIP from a published GitHub Release when available.
