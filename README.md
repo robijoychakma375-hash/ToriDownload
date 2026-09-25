@@ -1,4 +1,4 @@
-## Download Tori Download v0.22
+## Download Tori Download Manager v0.22
 
 [⬇ Download Windows Installer](https://github.com/robijoychakma375-hash/ToriDownload/releases/download/v0.22.0/ToriDownload-Setup-v0.22.exe)
 
