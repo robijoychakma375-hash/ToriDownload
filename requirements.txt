@@ -1,0 +1,4 @@
+pystray==0.19.5
+Pillow>=10,<12
+yt-dlp>=2025.1
+imageio-ffmpeg>=0.5

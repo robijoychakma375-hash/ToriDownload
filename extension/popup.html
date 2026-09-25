@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+:root{font-family:'Segoe UI',system-ui,sans-serif;color:#f2f7fa;background:#0e1823}
+*{box-sizing:border-box}body{width:324px;margin:0;background:#0e1823}
+header{padding:20px 20px 15px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #304454;background:#101f2b}
+header img{width:36px;height:36px}header strong{display:block;font-size:17px;line-height:1.25}header small{display:block;font-size:11px;color:#a6bac7;margin-top:2px}
+main{padding:16px 18px 18px}#connection{display:flex;align-items:center;gap:11px;padding:13px;background:#172532;border:1px solid #304454;border-radius:11px;font-size:13px;font-weight:600}
+#light{flex:none;width:11px;height:11px;border-radius:50%;background:#a6bac7;box-shadow:0 0 0 4px #304454}#connection.connected #light{background:#49d2a0;box-shadow:0 0 0 4px #184736}#connection.disconnected #light{background:#ef8190;box-shadow:0 0 0 4px #59303c}
+.section-label{margin:20px 2px 9px;font-size:10px;font-weight:700;letter-spacing:1.3px;color:#a6bac7;text-transform:uppercase}
+.toggle{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;margin:0 0 8px;padding:12px 13px;background:#172532;border:1px solid #304454;border-radius:10px;color:#f2f7fa;text-align:left;cursor:pointer;font:600 13px 'Segoe UI',system-ui}
+.toggle:hover{border-color:#5ac4dc;background:#1b2b39}.toggle:focus-visible{outline:2px solid #5ac4dc;outline-offset:2px}
+.toggle .switch{width:32px;height:18px;flex:none;border-radius:10px;background:#526475;position:relative;transition:background .15s}
+.toggle .switch:after{content:'';position:absolute;left:3px;top:3px;width:12px;height:12px;border-radius:50%;background:#fff;transition:transform .15s}
+.toggle.on .switch{background:#49d2a0}.toggle.on .switch:after{transform:translateX(14px)}
+.help{border-top:1px solid #304454;margin-top:14px;padding:13px 2px 0;color:#a6bac7;font-size:11px;line-height:1.5}
+</style>
+</head>
+<body>
+<header><img src="icon48.png" alt=""><div><strong>Tori Download</strong><small>Browser connector</small></div></header>
+<main>
+<div id="connection" role="status"><span id="light"></span><span id="status">Checking app…</span></div>
+<div class="section-label">Download controls</div>
+<button id="capture" class="toggle" type="button" aria-pressed="true"><span>Auto capture: ON</span><span class="switch" aria-hidden="true"></span></button>
+<button id="tori-only" class="toggle" type="button" aria-pressed="true"><span>Tori only: ON</span><span class="switch" aria-hidden="true"></span></button>
+<div class="help">Use the Tori button on a video to choose a file name, quality and save folder. Keep the desktop app running for browser capture.</div>
+</main><script src="popup.js"></script>
+</body></html>

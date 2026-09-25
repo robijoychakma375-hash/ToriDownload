@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Tori Download Connector",
+  "version": "0.22.0",
+  "description": "Send direct browser downloads to the Tori Download desktop app.",
+  "permissions": [
+    "downloads",
+    "storage",
+    "contextMenus",
+    "alarms"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8765/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["preclick.js", "video_overlay.js"],
+    "run_at": "document_start",
+    "all_frames": true
+  }],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon48.png"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsh+Ty8f4sTOgjysf09/X6D80iNO+g6MfLGLSwi1/c/Ds/xHqnbSz7EfLN4PmSGqMqBvSasJ9gkVzjaxfbZSxk1cq2ELEnbQKltwpdzzNKbgV7QUY7XEw87LT1i0qOmJM5iuH64IxJrz6aLXWvSz3X0eQEBeherB7EPVyAxJG+myFoE3WCsWuvaEM1PZRtOhSxkj+ns0zerEgCZZ0Amiq/rlLMV2NbGTL7uDLC+puERyQbB0iH8Owv1RzQ0xZIILmD/1I2S5k4ls6OF6+SEL8rdEjgQySS0Pv71sxMl4Bh8fe6w8lvRYx4exTfSlQwctjy+MgTFF1L50kRyK/482xjwIDAQAB"
+}
